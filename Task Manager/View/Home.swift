@@ -28,8 +28,28 @@ struct Home: View {
                 
                 CustomSegmentedBar()
                     .padding(.top, 5.0)
+                
+                // MARK: - Task View
             }
             .padding()
+        }
+        .overlay(alignment: .bottom) {
+            Button {
+                
+            } label: {
+                Label {
+                    Text("Add Task")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                } icon: {
+                    Image(systemName: "plus.app.fill")
+                }
+                .foregroundColor(.white)
+                .padding(.vertical, 12.0)
+                .padding(.horizontal)
+                .background(.black, in: Capsule())
+            }
+
         }
     }
     
