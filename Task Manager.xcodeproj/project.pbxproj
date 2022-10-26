@@ -17,6 +17,7 @@
 		89C9EBB7290979B400C19013 /* Task_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9EBB6290979B400C19013 /* Task_ManagerUITests.swift */; };
 		89C9EBB9290979B400C19013 /* Task_ManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9EBB8290979B400C19013 /* Task_ManagerUITestsLaunchTests.swift */; };
 		89C9EBC829097BD500C19013 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9EBC729097BD500C19013 /* Home.swift */; };
+		89C9EBCA29097ED800C19013 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9EBC929097ED800C19013 /* TaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		89C9EBB6290979B400C19013 /* Task_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_ManagerUITests.swift; sourceTree = "<group>"; };
 		89C9EBB8290979B400C19013 /* Task_ManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_ManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		89C9EBC729097BD500C19013 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		89C9EBC929097ED800C19013 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		89C9EBC629097BCE00C19013 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				89C9EBC929097ED800C19013 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C9EBA0290979B300C19013 /* Persistence.swift in Sources */,
+				89C9EBCA29097ED800C19013 /* TaskViewModel.swift in Sources */,
 				89C9EB99290979B200C19013 /* ContentView.swift in Sources */,
 				89C9EBC829097BD500C19013 /* Home.swift in Sources */,
 				89C9EBA3290979B300C19013 /* Task_Manager.xcdatamodeld in Sources */,
