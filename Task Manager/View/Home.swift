@@ -9,12 +9,26 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                VStack(alignment: .leading,
+                       spacing: 8.0, content: {
+                    Text("Welcome Back")
+                        .font(.callout)
+                    Text("Here's Update today")
+                        .font(.title.bold())
+                })
+                .frame(maxWidth: .infinity,
+                       alignment: .leading)
+                .padding(.vertical)
+            }
+            .padding()
+        }
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        ContentView()
     }
 }

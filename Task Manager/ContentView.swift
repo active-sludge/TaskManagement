@@ -10,7 +10,11 @@ import CoreData
 
 struct ContentView: View {
     var body: some View {
-        Home()
+        NavigationView {
+            Home()
+                .navigationBarTitle("Task Manager")
+                .navigationBarTitleDisplayMode(.inline)            
+        }
     }
 }
 
