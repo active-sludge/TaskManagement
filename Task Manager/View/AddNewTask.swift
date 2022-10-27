@@ -99,6 +99,46 @@ struct AddNewTask: View {
             
             Divider()
                 .padding(.vertical, 10.0)
+            
+            
+            // MARK: - Sample Task Types
+            let taskTypes: [String] = ["Basic", "Urgent", "Important"]
+            VStack(alignment: .leading, spacing: 12.0) {
+                Text("Task Type")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                HStack(spacing: 12) {
+                    ForEach(taskTypes, id: \.self) { type in
+                        Text(type)
+                            .font(.callout)
+                            .padding(.vertical, 8.0)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor( taskViewModel.taskType == type ? .white : .black)
+                            .background {
+                                if taskViewModel.taskType == type {
+                                    Capsule()
+                                        .fill(.black)
+                                } else {
+                                    Capsule()
+                                        .strokeBorder(.black)
+                                }
+                            }
+                            .contentShape(Capsule())
+                            .onTapGesture {
+                                withAnimation {
+                                    taskViewModel.taskType = type
+                                }
+                            }
+                            
+                    }
+                }
+            }
+            .padding(.vertical, 10.0)
+            
+            Divider()
+            
+            // MARK: - Save Button
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
