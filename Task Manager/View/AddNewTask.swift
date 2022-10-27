@@ -60,14 +60,20 @@ struct AddNewTask: View {
                 .padding(.vertical, 10.0)
             
             VStack(alignment: .leading, spacing: 12.0) {
-                Text("Task Title")
+                Text("Task Deadline")
                     .font(.caption)
                     .foregroundColor(.gray)
                 
-                TextField("", text: $taskViewModel.taskTitle)
-                    .frame(maxWidth: .infinity)
-                    .padding(.top, 10.0)
+                Text(taskViewModel.taskDeadline.formatted(date: .abbreviated,
+                                                          time: .omitted) +
+                     " " +
+                     taskViewModel.taskDeadline.formatted(date: .omitted,
+                                                          time: .shortened))
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .padding(.top, 8.0)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .overlay(alignment: .bottomTrailing) {
                 Button {
                     
@@ -75,13 +81,24 @@ struct AddNewTask: View {
                     Image(systemName: "calendar")
                         .foregroundColor(.black)
                 }
-
             }
-            
             
             Divider()
                 .padding(.vertical, 10.0)
             
+            VStack(alignment: .leading, spacing: 12.0) {
+                Text("Task Title")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                TextField("", text: $taskViewModel.taskTitle)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 8.0)
+            }
+            .padding(.top, 10.0)
+            
+            Divider()
+                .padding(.vertical, 10.0)
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
