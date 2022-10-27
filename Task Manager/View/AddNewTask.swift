@@ -55,11 +55,38 @@ struct AddNewTask: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.top, 30.0)
+            
+            Divider()
+                .padding(.vertical, 10.0)
+            
+            VStack(alignment: .leading, spacing: 12.0) {
+                Text("Task Title")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                TextField("", text: $taskViewModel.taskTitle)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 10.0)
+            }
+            .overlay(alignment: .bottomTrailing) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "calendar")
+                        .foregroundColor(.black)
+                }
+
+            }
+            
+            
+            Divider()
+                .padding(.vertical, 10.0)
+            
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
         
-         
+        
     }
 }
 
