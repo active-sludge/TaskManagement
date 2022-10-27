@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		897D98F32909DA8900E9F3F7 /* AddNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D98F22909DA8900E9F3F7 /* AddNewTask.swift */; };
 		89C9EB97290979B200C19013 /* Task_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9EB96290979B200C19013 /* Task_ManagerApp.swift */; };
 		89C9EB99290979B200C19013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9EB98290979B200C19013 /* ContentView.swift */; };
 		89C9EB9B290979B300C19013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C9EB9A290979B300C19013 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		897D98F22909DA8900E9F3F7 /* AddNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTask.swift; sourceTree = "<group>"; };
 		89C9EB93290979B200C19013 /* Task Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C9EB96290979B200C19013 /* Task_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_ManagerApp.swift; sourceTree = "<group>"; };
 		89C9EB98290979B200C19013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				89C9EBC729097BD500C19013 /* Home.swift */,
+				897D98F22909DA8900E9F3F7 /* AddNewTask.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				89C9EBCA29097ED800C19013 /* TaskViewModel.swift in Sources */,
 				89C9EB99290979B200C19013 /* ContentView.swift in Sources */,
 				89C9EBC829097BD500C19013 /* Home.swift in Sources */,
+				897D98F32909DA8900E9F3F7 /* AddNewTask.swift in Sources */,
 				89C9EBA3290979B300C19013 /* Task_Manager.xcdatamodeld in Sources */,
 				89C9EB97290979B200C19013 /* Task_ManagerApp.swift in Sources */,
 			);
