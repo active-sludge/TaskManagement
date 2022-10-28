@@ -35,7 +35,7 @@ struct Home: View {
         }
         .overlay(alignment: .bottom) {
             Button {
-                
+                taskViewModel.openEditTask.toggle()
             } label: {
                 Label {
                     Text("Add Task")
@@ -64,8 +64,10 @@ struct Home: View {
                 )
                 .ignoresSafeArea()
             }
-            
-            
+        }
+        .fullScreenCover(isPresented: $taskViewModel.openEditTask) {
+            AddNewTask()
+                .environmentObject(taskViewModel)
         }
     }
     
