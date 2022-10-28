@@ -139,6 +139,22 @@ struct AddNewTask: View {
             Divider()
             
             // MARK: - Save Button
+            Button {
+                
+            } label: {
+                Text("Save Task")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12.0)
+                    .foregroundColor(.white)
+                    .background {
+                        Capsule()
+                            .fill(.black)
+                    }
+            }
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            .padding(.bottom, 10.0)
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
