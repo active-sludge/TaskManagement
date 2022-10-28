@@ -66,6 +66,8 @@ struct Home: View {
             }
         }
         .fullScreenCover(isPresented: $taskViewModel.openEditTask) {
+            taskViewModel.resetTaskData()
+        } content: {
             AddNewTask()
                 .environmentObject(taskViewModel)
         }

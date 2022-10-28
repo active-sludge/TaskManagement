@@ -31,4 +31,11 @@ class TaskViewModel: ObservableObject {
         }
         return false
     }
+    
+    func resetTaskData() {
+        taskTitle = ""
+        taskColor = "Yellow"
+        taskDeadline = Date()
+        taskType = "Basic"
+    }
 }
