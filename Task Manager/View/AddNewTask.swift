@@ -76,7 +76,7 @@ struct AddNewTask: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .overlay(alignment: .bottomTrailing) {
                 Button {
-                    
+                    taskViewModel.showDatePicker.toggle()
                 } label: {
                     Image(systemName: "calendar")
                         .foregroundColor(.black)
@@ -164,8 +164,31 @@ struct AddNewTask: View {
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
-        
-        
+        .overlay {
+            ZStack {
+                if taskViewModel.showDatePicker {
+                    Rectangle()
+                        .fill(.ultraThinMaterial)
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            taskViewModel.showDatePicker = false
+                        }
+                    
+                    // MARK: - Date Picker
+                    // Disable past dates
+                    DatePicker("",
+                               selection: $taskViewModel.taskDeadline,
+                               in: Date.now...Date.distantFuture)
+                    .datePickerStyle(.graphical)
+                    .labelsHidden()
+                    .padding()
+                    .background(.white, in: RoundedRectangle(cornerRadius: 12.0,
+                                                             style: .continuous))
+                    .padding()
+                }
+            }
+            .animation(.easeInOut, value: taskViewModel.showDatePicker)
+        }
     }
 }
 
