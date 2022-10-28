@@ -17,4 +17,18 @@ class TaskViewModel: ObservableObject {
     @Published var taskColor: String = "Yellow"
     @Published var taskDeadline: Date = Date()
     @Published var taskType: String = "Basic"
+    
+    // MARK: - Save Task to Core Data
+    func addTask(context: NSManagedObjectContext) -> Bool {
+        let task = Task(context: context)
+        task.title = taskTitle
+        task.color = taskColor
+        task.deadline = taskDeadline
+        task.type = taskType
+        
+        if let _ = try? context.save() {
+            return true
+        }
+        return false
+    }
 }

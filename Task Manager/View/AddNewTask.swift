@@ -140,7 +140,11 @@ struct AddNewTask: View {
             
             // MARK: - Save Button
             Button {
-                
+                // If successful close view
+                if taskViewModel.addTask(context: env.managedObjectContext) {
+                    env.dismiss()
+                }
+                    
             } label: {
                 Text("Save Task")
                     .font(.callout)
