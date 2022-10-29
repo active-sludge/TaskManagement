@@ -19,6 +19,9 @@ struct Home: View {
                   predicate: nil,
                   animation: .easeInOut) var tasks: FetchedResults<Task>
     
+    // MARK: - Environment Values
+    @Environment(\.self) var env
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
@@ -38,6 +41,7 @@ struct Home: View {
                 
                 // MARK: - Task View
                 TaskView()
+                    .padding(.bottom, 40.0)
             }
             .padding()
         }
@@ -147,7 +151,9 @@ struct Home: View {
                 
                 if !task.isCompleted {
                     Button {
-                        
+                        // Updating Core Data
+                        task.isCompleted.toggle()
+                        try? env.managedObjectContext.save()
                     } label: {
                         Circle()
                             .stroke(.black, lineWidth: 1.5)
