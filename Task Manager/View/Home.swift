@@ -116,15 +116,15 @@ struct Home: View {
                         Image(systemName: "square.and.pencil")
                             .foregroundColor(.black)
                     }
-
                 }
             }
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background {
-                RoundedRectangle(cornerRadius: 12.0, style: .continuous)
-                    .fill(Color(task.color ?? "Yellow"))
-            }
+            
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background {
+            RoundedRectangle(cornerRadius: 12.0, style: .continuous)
+                .fill(Color(task.color ?? "Yellow"))
         }
     }
     
