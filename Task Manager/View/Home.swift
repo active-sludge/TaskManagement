@@ -119,6 +119,43 @@ struct Home: View {
                 }
             }
             
+            Text(task.title ?? "")
+                .font(.title2.bold())
+                .foregroundColor(.black)
+                .padding(.vertical, 10.0)
+            
+            HStack(alignment: .bottom, spacing: 0.0) {
+                VStack(alignment: .leading, spacing: 10.0) {
+                    Label {
+                        Text((task.deadline ?? Date()).formatted(date: .long,
+                                                                 time: .omitted))
+                    } icon: {
+                        Image(systemName: "calendar")
+                    }
+                    .font(.caption)
+                    
+                    Label {
+                        Text((task.deadline ?? Date()).formatted(date: .omitted,
+                                                                 time: .shortened))
+                    } icon: {
+                        Image(systemName: "clock")
+                    }
+                    .font(.caption)
+
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                if !task.isCompleted {
+                    Button {
+                        
+                    } label: {
+                        Circle()
+                            .stroke(.black, lineWidth: 1.5)
+                            .frame(width: 25.0, height: 25.0)
+                            .contentShape(Circle())
+                    }
+                }
+            }
         }
         .padding()
         .frame(maxWidth: .infinity)
