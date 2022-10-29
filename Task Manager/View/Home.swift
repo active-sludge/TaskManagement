@@ -115,7 +115,9 @@ struct Home: View {
                 // Edit button only for non completed tasks
                 if !task.isCompleted {
                     Button {
-                        
+                        taskViewModel.editTask = task
+                        taskViewModel.openEditTask = true
+                        taskViewModel.setupTask()
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .foregroundColor(.black)
