@@ -37,6 +37,7 @@ struct Home: View {
                     .padding(.top, 5.0)
                 
                 // MARK: - Task View
+                TaskView()
             }
             .padding()
         }
@@ -102,7 +103,7 @@ struct Home: View {
                     .padding(.horizontal)
                     .background {
                         Capsule()
-                            .fill(.gray.opacity(0.3))
+                            .fill(.white.opacity(0.3))
                     }
                 
                 Spacer()
