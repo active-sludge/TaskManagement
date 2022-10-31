@@ -1,3 +1,5 @@
+![gif-1](https://raw.githubusercontent.com/active-sludge/TaskManagement/main/gif-1.gif)
+
 Task Management app developed using SwiftUI and CoreData.
 
 ## Features
